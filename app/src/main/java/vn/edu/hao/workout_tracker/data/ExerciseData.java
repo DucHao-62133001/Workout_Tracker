@@ -205,6 +205,93 @@ public class ExerciseData {
                     )
             );
         }
+        // nhom canh tay
+        else if (muscleName.equals("Cánh Tay")) {
+
+            exerciseList.add(
+                    new Exercise(
+                            "Hammer Curl",
+                            "Bai tap giup phat trien canh tay va luc nam",
+                            R.drawable.ic_launcher_foreground,
+                            "Cánh Tay"
+                    )
+            );
+
+            exerciseList.add(
+                    new Exercise(
+                            "Reverse Curl",
+                            "Tap trung vao canh tay va co tay",
+                            R.drawable.ic_launcher_foreground,
+                            "Cánh Tay"
+                    )
+            );
+        }
+
+        // nhom tay truoc
+        else if (muscleName.equals("Tay Trước")) {
+
+            exerciseList.add(
+                    new Exercise(
+                            "Barbell Curl",
+                            "Bai tap co ban cho bap tay truoc",
+                            R.drawable.ic_launcher_foreground,
+                            "Tay Trước"
+                    )
+            );
+
+            exerciseList.add(
+                    new Exercise(
+                            "Concentration Curl",
+                            "Giup co tay truoc net hon",
+                            R.drawable.ic_launcher_foreground,
+                            "Tay Trước"
+                    )
+            );
+        }
+
+        // nhom tay sau
+        else if (muscleName.equals("Tay sau")) {
+
+            exerciseList.add(
+                    new Exercise(
+                            "Tricep Pushdown",
+                            "Bai tap pho bien cho tay sau",
+                            R.drawable.ic_launcher_foreground,
+                            "Tay sau"
+                    )
+            );
+
+            exerciseList.add(
+                    new Exercise(
+                            "Overhead Extension",
+                            "Giup phat trien dau dai tay sau",
+                            R.drawable.ic_launcher_foreground,
+                            "Tay sau"
+                    )
+            );
+        }
+
+        // nhom cang chan
+        else if (muscleName.equals("Cẳng Chân")) {
+
+            exerciseList.add(
+                    new Exercise(
+                            "Standing Calf Raise",
+                            "Bai tap co ban cho bap chuoi",
+                            R.drawable.ic_launcher_foreground,
+                            "Cẳng Chân"
+                    )
+            );
+
+            exerciseList.add(
+                    new Exercise(
+                            "Seated Calf Raise",
+                            "Tap trung vao phan duoi bap chuoi",
+                            R.drawable.ic_launcher_foreground,
+                            "Cẳng chân"
+                    )
+            );
+        }
 
         return exerciseList;
     }

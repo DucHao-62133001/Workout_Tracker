@@ -64,6 +64,29 @@
             android:text="- Keep your back stable&#10;- Control the movement"
             android:textSize="16sp"/>
 
+        <EditText
+            android:id="@+id/edtWeight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Mức tạ (kg)"
+            android:inputType="numberDecimal"
+            android:layout_marginTop="16dp"/>
+
+        <EditText
+            android:id="@+id/edtReps"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Reps"
+            android:inputType="number"
+            android:layout_marginTop="12dp"/>
+
+        <Button
+            android:id="@+id/btnSaveLog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Thêm"
+            android:layout_marginTop="20dp"/>
+
     </LinearLayout>
 
 </ScrollView>
