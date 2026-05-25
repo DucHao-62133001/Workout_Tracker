@@ -7,11 +7,26 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import vn.edu.hao.workout_tracker.R;
 
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import java.util.ArrayList;
+
+import vn.edu.hao.workout_tracker.adapters.ExerciseAdapter;
+import vn.edu.hao.workout_tracker.data.ExerciseData;
+import vn.edu.hao.workout_tracker.models.Exercise;
+
 import android.view.View;
 
 public class ExerciseListActivity extends AppCompatActivity {
 
     TextView txtTitle, btnBack;
+
+    RecyclerView recyclerView;
+
+    ArrayList<Exercise> exerciseList;
+
+    ExerciseAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,12 +38,24 @@ public class ExerciseListActivity extends AppCompatActivity {
         // anh xa text view
         txtTitle = findViewById(R.id.txtTitle);
         btnBack = findViewById(R.id.btnBack);
+        recyclerView = findViewById(R.id.recyclerExerciseList);
 
         // lay ten nhom co tu fragment gui sang
         String muscleName = getIntent().getStringExtra("muscle_name");
 
         // hien title len man hinh
         txtTitle.setText(muscleName);
+        // lay danh sach bai tap theo nhom co
+        exerciseList = ExerciseData.getExercisesByMuscle(muscleName);
+
+        // tao adapter
+        adapter = new ExerciseAdapter(exerciseList);
+
+        // set layout recycler view
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+        // gan adapter vao recycler view
+        recyclerView.setAdapter(adapter);
         // xu ly nut back
         btnBack.setOnClickListener(v -> {
             finish();
