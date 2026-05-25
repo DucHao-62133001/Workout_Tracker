@@ -75,13 +75,6 @@ public class ProfileFragment extends Fragment {
             txtBMIResult.setText("BMI: " + String.format("%.2f", bmi));
         });
 
-        // AVATAR
-        imgAvatar.setOnClickListener(v -> {
-            Intent intent = new Intent(Intent.ACTION_PICK);
-            intent.setType("image/*");
-            startActivityForResult(intent, 100);
-        });
-
         return view;
     }
 }

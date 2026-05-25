@@ -9,6 +9,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -18,7 +19,9 @@ import vn.edu.hao.workout_tracker.models.WorkoutLog;
 public class ExerciseDetailActivity extends AppCompatActivity {
 
     // Firebase
+    private FirebaseAuth mAuth;
     private DatabaseReference databaseReference;
+    private String uid;
 
     // Input
     private EditText edtWeight;
@@ -31,85 +34,76 @@ public class ExerciseDetailActivity extends AppCompatActivity {
     private TextView btnBack;
     private TextView txtExerciseName;
     private TextView txtDescription;
-
     private ImageView imgExercise;
 
-    // Data global
+    // Data
     private String exerciseName;
     private String muscleGroup;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        // gan layout
         setContentView(R.layout.activity_exercise_detail);
 
-        // Firebase
+        // FIREBASE AUTH + CHECK USER
+        mAuth = FirebaseAuth.getInstance();
+
+        if (mAuth.getCurrentUser() == null) {
+            Toast.makeText(this, "Chưa đăng nhập", Toast.LENGTH_SHORT).show();
+            finish();
+            return;
+        }
+        uid = mAuth.getCurrentUser().getUid();
+
+        //DATABASE
+        // workout_logs / uid
+
         databaseReference = FirebaseDatabase
                 .getInstance()
-                .getReference("workout_logs");
+                .getReference("workout_logs")
+                .child(uid);
 
-        // anh xa view
+
+        // ÁNH XẠ VIEW
+
         btnBack = findViewById(R.id.btnBack);
-
         txtExerciseName = findViewById(R.id.txtExerciseName);
-
         txtDescription = findViewById(R.id.txtDescription);
-
         imgExercise = findViewById(R.id.imgExercise);
 
         edtWeight = findViewById(R.id.edtWeight);
-
         edtReps = findViewById(R.id.edtReps);
-
         btnSaveLog = findViewById(R.id.btnSaveLog);
 
-        // lay data tu intent
-        exerciseName = getIntent().getStringExtra("exercise_name");
 
+        // GET DATA INTENT
+
+        exerciseName = getIntent().getStringExtra("exercise_name");
         muscleGroup = getIntent().getStringExtra("muscle_group");
 
-        String description =
-                getIntent().getStringExtra("exercise_description");
+        String description = getIntent().getStringExtra("exercise_description");
+        int imageResId = getIntent().getIntExtra("exercise_image", 0);
 
-        int imageResId =
-                getIntent().getIntExtra("exercise_image", 0);
-
-        // hien data len ui
         txtExerciseName.setText(exerciseName);
-
         txtDescription.setText(description);
-
         imgExercise.setImageResource(imageResId);
 
-        // nut back
-        btnBack.setOnClickListener(v -> {
-            finish();
-        });
 
-        // save log
+        // BACK BUTTON
+
+        btnBack.setOnClickListener(v -> finish());
+
+        //SAVE LOG
         btnSaveLog.setOnClickListener(v -> {
 
-            String weight =
-                    edtWeight.getText().toString().trim();
+            String weight = edtWeight.getText().toString().trim();
+            String reps = edtReps.getText().toString().trim();
 
-            String reps =
-                    edtReps.getText().toString().trim();
-
-            // kiem tra rong
             if (weight.isEmpty() || reps.isEmpty()) {
-
-                Toast.makeText(
-                        ExerciseDetailActivity.this,
-                        "Vui lòng nhập đầy đủ",
-                        Toast.LENGTH_SHORT
-                ).show();
-
+                Toast.makeText(this, "Vui lòng nhập đầy đủ", Toast.LENGTH_SHORT).show();
                 return;
             }
-
-            // tao object log
+            // tạo log
             WorkoutLog workoutLog = new WorkoutLog(
                     exerciseName,
                     muscleGroup,
@@ -117,35 +111,26 @@ public class ExerciseDetailActivity extends AppCompatActivity {
                     reps,
                     System.currentTimeMillis()
             );
-
-            // tao id firebase
-            String logId =
-                    databaseReference.push().getKey();
+            // tạo id
+            String logId = databaseReference.push().getKey();
+            if (logId == null) {
+                Toast.makeText(this, "Lỗi tạo ID", Toast.LENGTH_SHORT).show();
+                return;
+            }
 
             // save firebase
-            databaseReference
-                    .child(logId)
+            databaseReference.child(logId)
                     .setValue(workoutLog)
                     .addOnSuccessListener(unused -> {
 
-                        Toast.makeText(
-                                ExerciseDetailActivity.this,
-                                "Thành Công",
-                                Toast.LENGTH_SHORT
-                        ).show();
+                        Toast.makeText(this, "Thành công", Toast.LENGTH_SHORT).show();
 
-                        // clear input
                         edtWeight.setText("");
-
                         edtReps.setText("");
+
                     })
                     .addOnFailureListener(e -> {
-
-                        Toast.makeText(
-                                ExerciseDetailActivity.this,
-                                "Lỗi",
-                                Toast.LENGTH_SHORT
-                        ).show();
+                        Toast.makeText(this, "Lỗi lưu dữ liệu", Toast.LENGTH_SHORT).show();
                     });
         });
     }
