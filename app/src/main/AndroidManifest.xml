@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Workout_Tracker">
         <activity
+            android:name=".activities.ExerciseListActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
