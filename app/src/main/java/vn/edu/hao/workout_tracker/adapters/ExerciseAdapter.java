@@ -18,10 +18,20 @@ public class ExerciseAdapter extends RecyclerView.Adapter<ExerciseAdapter.Exerci
 
     // list bai tap
     ArrayList<Exercise> exerciseList;
+    OnItemClickListener listener;
 
     // constructor
     public ExerciseAdapter(ArrayList<Exercise> exerciseList) {
         this.exerciseList = exerciseList;
+    }
+    // interface click item
+    public interface OnItemClickListener {
+        void onItemClick(Exercise exercise);
+    }
+
+    // ham gan listener
+    public void setOnItemClickListener(OnItemClickListener listener) {
+        this.listener = listener;
     }
 
     @NonNull
@@ -45,6 +55,14 @@ public class ExerciseAdapter extends RecyclerView.Adapter<ExerciseAdapter.Exerci
         holder.txtName.setText(exercise.getName());
         holder.txtMuscle.setText(exercise.getMuscleGroup());
         holder.imgExercise.setImageResource(exercise.getImageResId());
+        // bat su kien click item
+        holder.itemView.setOnClickListener(v -> {
+
+            if (listener != null) {
+                listener.onItemClick(exercise);
+            }
+
+        });
     }
 
     @Override

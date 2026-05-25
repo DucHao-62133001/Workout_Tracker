@@ -15,7 +15,7 @@ import java.util.ArrayList;
 import vn.edu.hao.workout_tracker.adapters.ExerciseAdapter;
 import vn.edu.hao.workout_tracker.data.ExerciseData;
 import vn.edu.hao.workout_tracker.models.Exercise;
-
+import android.content.Intent;
 import android.view.View;
 
 public class ExerciseListActivity extends AppCompatActivity {
@@ -56,6 +56,23 @@ public class ExerciseListActivity extends AppCompatActivity {
 
         // gan adapter vao recycler view
         recyclerView.setAdapter(adapter);
+        // xu ly click bai tap
+        adapter.setOnItemClickListener(exercise -> {
+
+            Intent intent = new Intent(
+                    ExerciseListActivity.this,
+                    ExerciseDetailActivity.class
+            );
+
+            // gui data sang detail
+            intent.putExtra("exercise_name", exercise.getName());
+
+            intent.putExtra("exercise_description", exercise.getDescription());
+
+            intent.putExtra("exercise_image", exercise.getImageResId());
+
+            startActivity(intent);
+        });
         // xu ly nut back
         btnBack.setOnClickListener(v -> {
             finish();
