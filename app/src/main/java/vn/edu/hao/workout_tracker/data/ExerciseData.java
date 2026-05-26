@@ -18,24 +18,24 @@ public class ExerciseData {
         muscleList.add(
                 new MuscleGroup(
                         "Bụng",
-                        "20 exercises",
-                        R.drawable.ic_launcher_foreground
+                        "18 exercises",
+                        R.drawable.abs
                 )
         );
 
         muscleList.add(
                 new MuscleGroup(
                         "Lưng",
-                        "20 exercises",
-                        R.drawable.ic_launcher_foreground
+                        "15 exercises",
+                        R.drawable.back
                 )
         );
 
         muscleList.add(
                 new MuscleGroup(
                         "Ngực",
-                        "20 exercises",
-                        R.drawable.ic_launcher_foreground
+                        "23 exercises",
+                        R.drawable.chest
                 )
         );
 
@@ -43,23 +43,23 @@ public class ExerciseData {
                 new MuscleGroup(
                         "Chân",
                         "20 exercises",
-                        R.drawable.ic_launcher_foreground
+                        R.drawable.leg
                 )
         );
 
         muscleList.add(
                 new MuscleGroup(
                         "Cẳng Chân",
-                        "20 exercises",
-                        R.drawable.ic_launcher_foreground
+                        "9 exercises",
+                        R.drawable.calf
                 )
         );
 
         muscleList.add(
                 new MuscleGroup(
                         "Cánh Tay",
-                        "20 exercises",
-                        R.drawable.ic_launcher_foreground
+                        "4 exercises",
+                        R.drawable.forearms
                 )
         );
 
@@ -67,23 +67,23 @@ public class ExerciseData {
                 new MuscleGroup(
                         "Tay Trước",
                         "20 exercises",
-                        R.drawable.ic_launcher_foreground
+                        R.drawable.biceps
                 )
         );
 
         muscleList.add(
                 new MuscleGroup(
                         "Tay sau",
-                        "20 exercises",
-                        R.drawable.ic_launcher_foreground
+                        "18 exercises",
+                        R.drawable.triceps
                 )
         );
 
         muscleList.add(
                 new MuscleGroup(
                         "Vai",
-                        "20 exercises",
-                        R.drawable.ic_launcher_foreground
+                        "23 exercises",
+                        R.drawable.shoulder
                 )
         );
 
@@ -102,7 +102,7 @@ public class ExerciseData {
             exerciseList.add(
                     new Exercise(
                             "Bench Press",
-                            "Classic chest pressing movement",
+                            "Đẩy ngực với thanh xà",
                             R.drawable.ic_launcher_foreground,
                             "Ngực"
                     )
@@ -111,7 +111,7 @@ public class ExerciseData {
             exerciseList.add(
                     new Exercise(
                             "Incline Dumbbell Press",
-                            "Upper chest focused exercise",
+                            "Đẩy ngực với tạ Dumbells tập trung cho ngực trên",
                             R.drawable.ic_launcher_foreground,
                             "Ngực"
                     )
@@ -124,7 +124,7 @@ public class ExerciseData {
             exerciseList.add(
                     new Exercise(
                             "Pull Up",
-                            "Bodyweight back exercise",
+                            "Bài tập sử dụng khối lượng cơ thể",
                             R.drawable.ic_launcher_foreground,
                             "Lưng"
                     )
@@ -133,7 +133,7 @@ public class ExerciseData {
             exerciseList.add(
                     new Exercise(
                             "Lat Pulldown",
-                            "Machine exercise for lats",
+                            "Bài tập máy cho cơ Lats",
                             R.drawable.ic_launcher_foreground,
                             "Lưng"
                     )
@@ -146,7 +146,7 @@ public class ExerciseData {
             exerciseList.add(
                     new Exercise(
                             "Squat",
-                            "Compound leg exercise",
+                            "Bài tập chân Compound",
                             R.drawable.ic_launcher_foreground,
                             "Chân"
                     )
@@ -155,7 +155,7 @@ public class ExerciseData {
             exerciseList.add(
                     new Exercise(
                             "Leg Press",
-                            "Machine leg exercise",
+                            "Tập chân với máy",
                             R.drawable.ic_launcher_foreground,
                             "Chân"
                     )
@@ -168,7 +168,7 @@ public class ExerciseData {
             exerciseList.add(
                     new Exercise(
                             "Crunch",
-                            "Basic abdominal exercise",
+                            "Chuyển động gập bụng trên cơ bản",
                             R.drawable.ic_launcher_foreground,
                             "Bụng"
                     )
@@ -177,7 +177,7 @@ public class ExerciseData {
             exerciseList.add(
                     new Exercise(
                             "Leg Raise",
-                            "Lower abs focused exercise",
+                            "Bài nâng chân tập trung cho cơ bụng dưới",
                             R.drawable.ic_launcher_foreground,
                             "Bụng"
                     )
@@ -190,7 +190,7 @@ public class ExerciseData {
             exerciseList.add(
                     new Exercise(
                             "Shoulder Press",
-                            "Basic shoulder exercise",
+                            "Bài tập đẩy vai cơ bản",
                             R.drawable.ic_launcher_foreground,
                             "Vai"
                     )
@@ -199,7 +199,7 @@ public class ExerciseData {
             exerciseList.add(
                     new Exercise(
                             "Lateral Raise",
-                            "Side delt isolation",
+                            "Bài cô lập cho cơ vai ngang",
                             R.drawable.ic_launcher_foreground,
                             "Vai"
                     )
@@ -211,7 +211,7 @@ public class ExerciseData {
             exerciseList.add(
                     new Exercise(
                             "Hammer Curl",
-                            "Bai tap giup phat trien canh tay va luc nam",
+                            "Bài tập giúp cải thiện cánh tay và lực nắm",
                             R.drawable.ic_launcher_foreground,
                             "Cánh Tay"
                     )
@@ -220,7 +220,7 @@ public class ExerciseData {
             exerciseList.add(
                     new Exercise(
                             "Reverse Curl",
-                            "Tap trung vao canh tay va co tay",
+                            "Tập trung vào cánh tay và cơ tay",
                             R.drawable.ic_launcher_foreground,
                             "Cánh Tay"
                     )
@@ -233,7 +233,7 @@ public class ExerciseData {
             exerciseList.add(
                     new Exercise(
                             "Barbell Curl",
-                            "Bai tap co ban cho bap tay truoc",
+                            "Bài tập cho cơ tay trước",
                             R.drawable.ic_launcher_foreground,
                             "Tay Trước"
                     )
@@ -242,7 +242,7 @@ public class ExerciseData {
             exerciseList.add(
                     new Exercise(
                             "Concentration Curl",
-                            "Giup co tay truoc net hon",
+                            "Giúp cơ tay trước nét hơn",
                             R.drawable.ic_launcher_foreground,
                             "Tay Trước"
                     )
@@ -255,7 +255,7 @@ public class ExerciseData {
             exerciseList.add(
                     new Exercise(
                             "Tricep Pushdown",
-                            "Bai tap pho bien cho tay sau",
+                            "Bài tập phổ biến cho tay sau",
                             R.drawable.ic_launcher_foreground,
                             "Tay sau"
                     )
@@ -264,7 +264,7 @@ public class ExerciseData {
             exerciseList.add(
                     new Exercise(
                             "Overhead Extension",
-                            "Giup phat trien dau dai tay sau",
+                            "Giúp phát triển cơ đầu dài tay sau",
                             R.drawable.ic_launcher_foreground,
                             "Tay sau"
                     )
@@ -277,7 +277,7 @@ public class ExerciseData {
             exerciseList.add(
                     new Exercise(
                             "Standing Calf Raise",
-                            "Bai tap co ban cho bap chuoi",
+                            "Bài tập cơ bản cho bắp chuối",
                             R.drawable.ic_launcher_foreground,
                             "Cẳng Chân"
                     )
@@ -286,7 +286,7 @@ public class ExerciseData {
             exerciseList.add(
                     new Exercise(
                             "Seated Calf Raise",
-                            "Tap trung vao phan duoi bap chuoi",
+                            "Tập trung vào phần dưới bắp chuối",
                             R.drawable.ic_launcher_foreground,
                             "Cẳng chân"
                     )
