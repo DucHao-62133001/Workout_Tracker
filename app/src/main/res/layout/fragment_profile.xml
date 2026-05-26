@@ -1,6 +1,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:padding="20dp"
     android:gravity="center_horizontal">
@@ -19,32 +20,60 @@
         android:id="@+id/txtEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+
         android:text="Email"
+
         android:textSize="18sp"
+        android:textStyle="bold"
+
+        android:textColor="#212121"
+
         android:layout_marginBottom="20dp"/>
 
     <TextView
         android:id="@+id/txtTotalWorkouts"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Tổng số lần tập: 0"
-        android:textSize="18sp"
+        android:text="🔥Tổng số lần tập: "
         android:textStyle="bold"
-
+        android:textColor="#5E35B1"
+        android:textSize="22sp"
         android:layout_marginBottom="20dp"/>
 
     <!-- BMI INPUT -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="8dp"
+
+        app:cardCornerRadius="16dp"
+        app:cardElevation="3dp"
+
+        app:cardBackgroundColor="#FFFFFF">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="vertical"
+
+            android:padding="16dp">
     <EditText
         android:id="@+id/edtWeight"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@drawable/bg_edittext"
+        android:padding="14dp"
         android:hint="Cân Nặng (kg)"/>
 
     <EditText
         android:id="@+id/edtHeight"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Chiều cao (cm)"
+        android:background="@drawable/bg_edittext"
+        android:padding="14dp"
+        android:hint="Chiều Cao (cm)"
         android:layout_marginTop="10dp"/>
 
     <Button
@@ -59,14 +88,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="BMI: -"
-        android:textSize="18sp"
-        android:layout_marginTop="10dp"/>
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"
+        android:textColor="#5E35B1"
+        android:textSize="20sp"/>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
 
     <View
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"/>
 
+    <!-- LOGOUT -->
     <Button
         android:id="@+id/btnLogout"
         android:layout_width="match_parent"
