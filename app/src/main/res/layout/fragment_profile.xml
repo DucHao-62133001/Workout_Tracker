@@ -23,6 +23,16 @@
         android:textSize="18sp"
         android:layout_marginBottom="20dp"/>
 
+    <TextView
+        android:id="@+id/txtTotalWorkouts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tổng số lần tập: 0"
+        android:textSize="18sp"
+        android:textStyle="bold"
+
+        android:layout_marginBottom="20dp"/>
+
     <!-- BMI INPUT -->
     <EditText
         android:id="@+id/edtWeight"

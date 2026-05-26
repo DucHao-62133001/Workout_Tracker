@@ -15,6 +15,12 @@ import com.google.firebase.auth.FirebaseUser;
 import vn.edu.hao.workout_tracker.activities.LoginActivity;
 import vn.edu.hao.workout_tracker.R;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
 public class ProfileFragment extends Fragment {
 
     private TextView txtEmail, txtBMIResult;
@@ -22,6 +28,8 @@ public class ProfileFragment extends Fragment {
     private Button btnLogout, btnCalcBMI;
 
     private FirebaseAuth mAuth;
+    private TextView txtTotalWorkouts;
+    private DatabaseReference databaseReference;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -34,6 +42,7 @@ public class ProfileFragment extends Fragment {
         // ánh xạ
         txtEmail = view.findViewById(R.id.txtEmail);
         txtBMIResult = view.findViewById(R.id.txtBMIResult);
+        txtTotalWorkouts = view.findViewById(R.id.txtTotalWorkouts);
         edtWeight = view.findViewById(R.id.edtWeight);
         edtHeight = view.findViewById(R.id.edtHeight);
         btnLogout = view.findViewById(R.id.btnLogout);
@@ -42,7 +51,37 @@ public class ProfileFragment extends Fragment {
         // HIỂN THỊ EMAIL USER
         FirebaseUser user = mAuth.getCurrentUser();
         if (user != null) {
-            txtEmail.setText("Email: " + user.getEmail());
+
+            txtEmail.setText(
+                    "Email: " + user.getEmail()
+            );
+
+            // Firebase reference workout logs
+            databaseReference = FirebaseDatabase
+                    .getInstance()
+                    .getReference("workout_logs")
+                    .child(user.getUid());
+
+            // Dem tong workout
+            databaseReference.addValueEventListener(
+                    new ValueEventListener() {
+
+                        @Override
+                        public void onDataChange(DataSnapshot snapshot) {
+
+                            int total = (int) snapshot.getChildrenCount();
+
+                            txtTotalWorkouts.setText(
+                                    "Tổng số lần tập: " + total
+                            );
+                        }
+
+                        @Override
+                        public void onCancelled(DatabaseError error) {
+
+                        }
+                    }
+            );
         }
 
         // LOGOUT
@@ -72,7 +111,33 @@ public class ProfileFragment extends Fragment {
 
             float bmi = weight / (height * height);
 
-            txtBMIResult.setText("BMI: " + String.format("%.2f", bmi));
+            String status;
+
+// Phan loai BMI
+            if (bmi < 18.5f) {
+
+                status = "Thiếu cân";
+
+            } else if (bmi < 25f) {
+
+                status = "Cân nặng bình thường";
+
+            } else if (bmi < 30f) {
+
+                status = "Thừa Cân";
+
+            } else {
+
+                status = "Béo Phì";
+            }
+
+// Hien ket qua BMI + status
+            txtBMIResult.setText(
+                    "BMI: "
+                            + String.format("%.2f", bmi)
+                            + "\n"
+                            + status
+            );
         });
 
         return view;
