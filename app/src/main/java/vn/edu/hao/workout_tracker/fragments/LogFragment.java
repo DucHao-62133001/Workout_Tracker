@@ -28,6 +28,8 @@ import vn.edu.hao.workout_tracker.models.WorkoutLog;
 public class LogFragment extends Fragment {
 
     private RecyclerView recyclerLogs;
+
+    private View layoutEmpty;
     private ArrayList<WorkoutLog> logList;
     private LogAdapter adapter;
     private DatabaseReference databaseReference;
@@ -44,6 +46,8 @@ public class LogFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_log, container, false);
 
         recyclerLogs = view.findViewById(R.id.recyclerLogs);
+
+        layoutEmpty = view.findViewById(R.id.layoutEmpty);
 
         recyclerLogs.setLayoutManager(
                 new LinearLayoutManager(getContext())
@@ -117,6 +121,23 @@ public class LogFragment extends Fragment {
 
                         // Refresh RecyclerView
                         adapter.notifyDataSetChanged();
+
+                        // Kiem tra list rong hay khong
+                        if (logList.isEmpty()) {
+
+                            // Hien empty state
+                            layoutEmpty.setVisibility(View.VISIBLE);
+
+                            // An RecyclerView
+                            recyclerLogs.setVisibility(View.GONE);
+
+                        } else {
+
+                            // Co data thi hien RecyclerView
+                            layoutEmpty.setVisibility(View.GONE);
+
+                            recyclerLogs.setVisibility(View.VISIBLE);
+                        }
                     }
 
                     @Override
