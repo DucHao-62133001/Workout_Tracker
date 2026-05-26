@@ -6,6 +6,7 @@ public class WorkoutLog {
     private String muscleGroup;
     private String weight;
     private String reps;
+    private String logId;
     private long timestamp;
 
     // Constructor rong cho Firebase
@@ -60,5 +61,13 @@ public class WorkoutLog {
 
     public void setTimestamp(long timestamp) {
         this.timestamp = timestamp;
+    }
+
+    public String getLogId() {
+        return logId;
+    }
+
+    public void setLogId(String logId) {
+        this.logId = logId;
     }
 }

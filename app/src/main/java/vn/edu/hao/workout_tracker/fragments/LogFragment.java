@@ -51,8 +51,6 @@ public class LogFragment extends Fragment {
 
         logList = new ArrayList<>();
 
-        adapter = new LogAdapter(logList);
-
         recyclerLogs.setAdapter(adapter);
 
         // Lay log theo user hien tai
@@ -68,6 +66,14 @@ public class LogFragment extends Fragment {
                 .getInstance()
                 .getReference("workout_logs")
                 .child(uid);
+
+        // Tao adapter sau khi co databaseReference
+        adapter = new LogAdapter(
+                logList,
+                databaseReference
+        );
+
+        recyclerLogs.setAdapter(adapter);
 
         loadWorkoutLogs();
 
@@ -92,7 +98,9 @@ public class LogFragment extends Fragment {
 
                             if (log != null) {
 
-                                // Them log vao list
+                                // Lay Firebase key lam logId
+                                log.setLogId(dataSnapshot.getKey());
+
                                 logList.add(log);
                             }
                         }

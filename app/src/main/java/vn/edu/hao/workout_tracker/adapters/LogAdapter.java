@@ -18,13 +18,24 @@ import java.util.Calendar;
 import vn.edu.hao.workout_tracker.R;
 import vn.edu.hao.workout_tracker.models.WorkoutLog;
 
+import android.app.AlertDialog;
+
+import com.google.firebase.database.DatabaseReference;
+
 public class LogAdapter
         extends RecyclerView.Adapter<LogAdapter.LogViewHolder> {
 
     private List<WorkoutLog> logList;
+    private DatabaseReference databaseReference;
 
-    public LogAdapter(List<WorkoutLog> logList) {
+
+    public LogAdapter(
+            List<WorkoutLog> logList,
+            DatabaseReference databaseReference
+    ) {
+
         this.logList = logList;
+        this.databaseReference = databaseReference;
     }
 
     @NonNull
@@ -101,6 +112,29 @@ public class LogAdapter
             // Item dau tien luon hien date
             holder.txtDate.setVisibility(View.VISIBLE);
         }
+
+        // LONG PRESS DE DELETE
+
+        holder.itemView.setOnLongClickListener(v -> {
+
+            new AlertDialog.Builder(holder.itemView.getContext())
+                    .setTitle("Delete Log")
+                    .setMessage("Do you want to delete this workout log?")
+
+                    .setPositiveButton("Delete", (dialog, which) -> {
+
+                        // Xoa log tren Firebase
+                        databaseReference
+                                .child(log.getLogId())
+                                .removeValue();
+                    })
+
+                    .setNegativeButton("Cancel", null)
+
+                    .show();
+
+            return true;
+        });
     }
 
     @Override
