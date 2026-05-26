@@ -13,6 +13,8 @@ import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 
+import java.util.Calendar;
+
 import vn.edu.hao.workout_tracker.R;
 import vn.edu.hao.workout_tracker.models.WorkoutLog;
 
@@ -61,10 +63,10 @@ public class LogAdapter
                         + log.getReps() + " reps"
         );
 
-        // format ngay gio
+        // Format ngay gio
         SimpleDateFormat sdf =
                 new SimpleDateFormat(
-                        "dd/MM/yyyy HH:mm",
+                        "dd/MM/yyyy",
                         Locale.getDefault()
                 );
 
@@ -73,6 +75,32 @@ public class LogAdapter
         );
 
         holder.txtDate.setText(date);
+
+        // =========================
+        // AN DATE NEU TRUNG NGAY
+        // =========================
+
+        if (position > 0) {
+
+            WorkoutLog previousLog =
+                    logList.get(position - 1);
+
+            if (isSameDay(log, previousLog)) {
+
+                // Trung ngay thi an txtDate
+                holder.txtDate.setVisibility(View.GONE);
+
+            } else {
+
+                // Khac ngay thi hien
+                holder.txtDate.setVisibility(View.VISIBLE);
+            }
+
+        } else {
+
+            // Item dau tien luon hien date
+            holder.txtDate.setVisibility(View.VISIBLE);
+        }
     }
 
     @Override
@@ -103,5 +131,22 @@ public class LogAdapter
             txtDate =
                     itemView.findViewById(R.id.txtDate);
         }
+    }
+    private boolean isSameDay(
+            WorkoutLog log1,
+            WorkoutLog log2
+    ) {
+
+        Calendar cal1 = Calendar.getInstance();
+        Calendar cal2 = Calendar.getInstance();
+
+        cal1.setTimeInMillis(log1.getTimestamp());
+        cal2.setTimeInMillis(log2.getTimestamp());
+
+        return cal1.get(Calendar.YEAR)
+                == cal2.get(Calendar.YEAR)
+
+                && cal1.get(Calendar.DAY_OF_YEAR)
+                == cal2.get(Calendar.DAY_OF_YEAR);
     }
 }

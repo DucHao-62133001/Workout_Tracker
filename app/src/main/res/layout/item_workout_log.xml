@@ -5,37 +5,65 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
+
+    android:layout_marginHorizontal="12dp"
+    android:layout_marginTop="8dp"
     android:padding="16dp"
-    android:layout_margin="8dp"
-    android:background="@android:color/darker_gray">
 
-    <TextView
-        android:id="@+id/txtExerciseName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Bench Press"
-        android:textSize="18sp"
-        android:textStyle="bold"/>
+    android:background="#E0E0E0">
 
-    <TextView
-        android:id="@+id/txtMuscleGroup"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Nguc"
-        android:layout_marginTop="4dp"/>
-
-    <TextView
-        android:id="@+id/txtWeightReps"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="50kg x 12 reps"
-        android:layout_marginTop="4dp"/>
-
+    <!-- DATE -->
     <TextView
         android:id="@+id/txtDate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="25/05/2026"
-        android:layout_marginTop="4dp"/>
+
+        android:text="26/05/2026"
+        android:textSize="16sp"
+        android:textStyle="bold"
+
+        android:textColor="#5E35B1"
+
+        android:layout_marginBottom="10dp"/>
+
+    <!-- EXERCISE -->
+    <TextView
+        android:id="@+id/txtExerciseName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="Bench Press"
+        android:textSize="20sp"
+        android:textStyle="bold"
+
+        android:textColor="#212121"/>
+
+    <!-- MUSCLE GROUP -->
+    <TextView
+        android:id="@+id/txtMuscleGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="Nguc"
+
+        android:textSize="14sp"
+        android:textColor="#616161"
+
+        android:layout_marginTop="6dp"/>
+
+    <!-- WEIGHT + REPS -->
+    <TextView
+        android:id="@+id/txtWeightReps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="50kg x 12 reps"
+
+        android:textSize="15sp"
+        android:textStyle="bold"
+
+        android:textColor="#424242"
+
+        android:layout_marginTop="6dp"/>
 
 </LinearLayout>

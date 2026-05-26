@@ -19,6 +19,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 import vn.edu.hao.workout_tracker.R;
 import vn.edu.hao.workout_tracker.adapters.LogAdapter;
@@ -49,20 +50,24 @@ public class LogFragment extends Fragment {
         );
 
         logList = new ArrayList<>();
+
         adapter = new LogAdapter(logList);
+
         recyclerLogs.setAdapter(adapter);
 
-        //LẤY LOG THEO USER
+        // Lay log theo user hien tai
         FirebaseAuth mAuth = FirebaseAuth.getInstance();
 
-        if (mAuth.getCurrentUser() == null) return view;
+        if (mAuth.getCurrentUser() == null) {
+            return view;
+        }
 
         String uid = mAuth.getCurrentUser().getUid();
 
         databaseReference = FirebaseDatabase
                 .getInstance()
                 .getReference("workout_logs")
-                .child(uid); // <<< QUAN TRỌNG
+                .child(uid);
 
         loadWorkoutLogs();
 
@@ -77,22 +82,39 @@ public class LogFragment extends Fragment {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
 
+                        // Xoa list cu de load lai data moi
                         logList.clear();
 
                         for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
 
-                            WorkoutLog log = dataSnapshot.getValue(WorkoutLog.class);
+                            WorkoutLog log =
+                                    dataSnapshot.getValue(WorkoutLog.class);
 
                             if (log != null) {
+
+                                // Them log vao list
                                 logList.add(log);
                             }
                         }
 
+                        // Sort log moi nhat len dau
+                        Collections.sort(
+                                logList,
+                                (log1, log2) ->
+                                        Long.compare(
+                                                log2.getTimestamp(),
+                                                log1.getTimestamp()
+                                        )
+                        );
+
+                        // Refresh RecyclerView
                         adapter.notifyDataSetChanged();
                     }
 
                     @Override
-                    public void onCancelled(@NonNull DatabaseError error) {}
+                    public void onCancelled(@NonNull DatabaseError error) {
+
+                    }
                 }
         );
     }
