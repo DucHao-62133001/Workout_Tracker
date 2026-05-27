@@ -50,6 +50,7 @@
             android:textStyle="bold" />
 
         <!-- IMAGE CARD -->
+        <!-- IMAGE CARD -->
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="230dp"
@@ -57,12 +58,10 @@
             card_view:cardCornerRadius="20dp"
             card_view:cardElevation="6dp">
 
-            <ImageView
-                android:id="@+id/imgExercise"
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/viewPagerImages"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:scaleType="centerCrop"
-                android:src="@drawable/ic_launcher_foreground" />
+                android:layout_height="match_parent"/>
 
         </androidx.cardview.widget.CardView>
 

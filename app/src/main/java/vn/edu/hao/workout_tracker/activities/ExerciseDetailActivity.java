@@ -16,6 +16,12 @@ import com.google.firebase.database.FirebaseDatabase;
 import vn.edu.hao.workout_tracker.R;
 import vn.edu.hao.workout_tracker.models.WorkoutLog;
 
+import androidx.viewpager2.widget.ViewPager2;
+
+import java.util.ArrayList;
+
+import vn.edu.hao.workout_tracker.adapters.ImageSliderAdapter;
+
 public class ExerciseDetailActivity extends AppCompatActivity {
 
     // Firebase
@@ -34,7 +40,7 @@ public class ExerciseDetailActivity extends AppCompatActivity {
     private TextView btnBack;
     private TextView txtExerciseName;
     private TextView txtDescription;
-    private ImageView imgExercise;
+    //private ImageView imgExercise;
 
     // Data
     private String exerciseName;
@@ -44,6 +50,9 @@ public class ExerciseDetailActivity extends AppCompatActivity {
 
     //tips
     private TextView txtTips;
+
+    // wipe ảnh
+    private ViewPager2 viewPagerImages;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -74,7 +83,8 @@ public class ExerciseDetailActivity extends AppCompatActivity {
         btnBack = findViewById(R.id.btnBack);
         txtExerciseName = findViewById(R.id.txtExerciseName);
         txtDescription = findViewById(R.id.txtDescription);
-        imgExercise = findViewById(R.id.imgExercise);
+        viewPagerImages = findViewById(R.id.viewPagerImages);
+        //imgExercise = findViewById(R.id.imgExercise);
         txtTips = findViewById(R.id.txtTips);
 
         edtWeight = findViewById(R.id.edtWeight);
@@ -91,13 +101,36 @@ public class ExerciseDetailActivity extends AppCompatActivity {
 
         String description = getIntent().getStringExtra("exercise_description");
         int imageResId = getIntent().getIntExtra("exercise_image", 0);
+        ArrayList<Integer> imageList = new ArrayList<>();
+        if (exerciseName.equals("Bench Press")) {
+
+            imageList.add(R.drawable.bench_1);
+            imageList.add(R.drawable.bench_2);
+
+        }
+        else if (exerciseName.equals("Crunch")) {
+
+            imageList.add(R.drawable.crunch_2);
+            imageList.add(R.drawable.crunch_1);
+            imageList.add(R.drawable.crunch_3);
+
+        }
+        else {
+
+            imageList.add(imageResId);
+
+        }
         String tips = getIntent().getStringExtra("exercise_tips");
 
         txtExerciseName.setText(exerciseName);
         txtDescription.setText(description);
-        imgExercise.setImageResource(imageResId);
+        //imgExercise.setImageResource(imageResId);
         txtMuscleGroup.setText(muscleGroup);
         txtTips.setText(tips);
+        ImageSliderAdapter sliderAdapter =
+                new ImageSliderAdapter(imageList);
+
+        viewPagerImages.setAdapter(sliderAdapter);
 
 
         // BACK BUTTON
