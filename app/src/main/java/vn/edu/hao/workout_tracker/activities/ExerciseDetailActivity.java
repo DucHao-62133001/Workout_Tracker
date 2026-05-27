@@ -40,6 +40,8 @@ public class ExerciseDetailActivity extends AppCompatActivity {
     private String exerciseName;
     private String muscleGroup;
 
+    private TextView txtMuscleGroup;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -75,6 +77,8 @@ public class ExerciseDetailActivity extends AppCompatActivity {
         edtReps = findViewById(R.id.edtReps);
         btnSaveLog = findViewById(R.id.btnSaveLog);
 
+        txtMuscleGroup = findViewById(R.id.txtMuscleGroup);
+
 
         // GET DATA INTENT
 
@@ -87,6 +91,7 @@ public class ExerciseDetailActivity extends AppCompatActivity {
         txtExerciseName.setText(exerciseName);
         txtDescription.setText(description);
         imgExercise.setImageResource(imageResId);
+        txtMuscleGroup.setText(muscleGroup);
 
 
         // BACK BUTTON

@@ -102,7 +102,7 @@ public class ExerciseData {
             exerciseList.add(
                     new Exercise(
                             "Bench Press",
-                            "Đẩy ngực với thanh xà",
+                            "Đẩy ngực với thanh xàĐẩy ngực với thanh xà",
                             R.drawable.ic_launcher_foreground,
                             "Ngực"
                     )
