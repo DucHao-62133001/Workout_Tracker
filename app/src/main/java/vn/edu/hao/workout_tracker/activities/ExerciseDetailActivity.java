@@ -102,18 +102,96 @@ public class ExerciseDetailActivity extends AppCompatActivity {
         String description = getIntent().getStringExtra("exercise_description");
         int imageResId = getIntent().getIntExtra("exercise_image", 0);
         ArrayList<Integer> imageList = new ArrayList<>();
-        if (exerciseName.equals("Bench Press")) {
 
+        // Ngực
+        if (exerciseName.equals("Bench Press")) {
             imageList.add(R.drawable.bench_1);
             imageList.add(R.drawable.bench_2);
-
         }
-        else if (exerciseName.equals("Crunch")) {
+        else if (exerciseName.equals("Incline Dumbell Press")) {
+            imageList.add(R.drawable.inclinedb_1);
+            imageList.add(R.drawable.inclinedb_2);
+        }
 
+        // Bụng
+        else if (exerciseName.equals("Crunch")) {
             imageList.add(R.drawable.crunch_2);
             imageList.add(R.drawable.crunch_1);
             imageList.add(R.drawable.crunch_3);
+        }
+        else if (exerciseName.equals("Leg Raise")) {
+            imageList.add(R.drawable.leg_raise_1);
+            imageList.add(R.drawable.leg_raise_2);
+        }
 
+        // Lưng
+        else if (exerciseName.equals("Pull Up")) {
+            imageList.add(R.drawable.pull_up_1);
+            imageList.add(R.drawable.pull_up_2);
+        }
+        else if (exerciseName.equals("Lat Pulldown")) {
+            imageList.add(R.drawable.lat_pulldown_1);
+            imageList.add(R.drawable.lat_pulldown_2);
+        }
+
+        // Chân
+        else if (exerciseName.equals("Squat")) {
+            imageList.add(R.drawable.squat_1);
+            imageList.add(R.drawable.squat_2);
+        }
+        else if (exerciseName.equals("Leg Press")) {
+            imageList.add(R.drawable.leg_press_1);
+            imageList.add(R.drawable.leg_press_2);
+        }
+
+        //  Cẳng chân
+        else if (exerciseName.equals("Standing Calf Raise")) {
+            imageList.add(R.drawable.standing_calf_1);
+            imageList.add(R.drawable.standing_calf_2);
+        }
+        else if (exerciseName.equals("Seated Calf Raise")) {
+            imageList.add(R.drawable.seated_calf_1);
+            imageList.add(R.drawable.seated_calf_2);
+        }
+
+        // Cánh tay
+        else if (exerciseName.equals("Hammer Curl")) {
+            imageList.add(R.drawable.hammer_curl_1);
+            imageList.add(R.drawable.hammer_curl_2);
+        }
+        else if (exerciseName.equals("Reverse Curl")) {
+            imageList.add(R.drawable.reverse_curl_1);
+            imageList.add(R.drawable.reverse_curl_2);
+        }
+
+        // Tay trước
+        else if (exerciseName.equals("Barbell Curl")) {
+            imageList.add(R.drawable.barbell_curl_1);
+            imageList.add(R.drawable.barbell_curl_2);
+        }
+        else if (exerciseName.equals("Concentration Curl")) {
+            imageList.add(R.drawable.concentration_curl_1);
+            imageList.add(R.drawable.concentration_curl_2);
+        }
+
+        // Tay sau
+        else if (exerciseName.equals("Tricep Pushdown")) {
+            imageList.add(R.drawable.triceps_pushdown_1);
+            imageList.add(R.drawable.triceps_pushdown_2);
+        }
+        else if (exerciseName.equals("Overhead Extension")) {
+            imageList.add(R.drawable.overhead_extension_1);
+            imageList.add(R.drawable.overhead_extension_2);
+        }
+
+        // Vai
+        else if (exerciseName.equals("Shoulder Press")) {
+            imageList.add(R.drawable.shoulder_press_1);
+            imageList.add(R.drawable.shoulder_press_2);
+        }
+        else if (exerciseName.equals("Lateral Raise")) {
+            imageList.add(R.drawable.lateral_raise_1);
+            imageList.add(R.drawable.lateral_raise_2);
         }
         else {
 
