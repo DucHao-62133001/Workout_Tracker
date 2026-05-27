@@ -42,6 +42,9 @@ public class ExerciseDetailActivity extends AppCompatActivity {
 
     private TextView txtMuscleGroup;
 
+    //tips
+    private TextView txtTips;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -72,6 +75,7 @@ public class ExerciseDetailActivity extends AppCompatActivity {
         txtExerciseName = findViewById(R.id.txtExerciseName);
         txtDescription = findViewById(R.id.txtDescription);
         imgExercise = findViewById(R.id.imgExercise);
+        txtTips = findViewById(R.id.txtTips);
 
         edtWeight = findViewById(R.id.edtWeight);
         edtReps = findViewById(R.id.edtReps);
@@ -87,11 +91,13 @@ public class ExerciseDetailActivity extends AppCompatActivity {
 
         String description = getIntent().getStringExtra("exercise_description");
         int imageResId = getIntent().getIntExtra("exercise_image", 0);
+        String tips = getIntent().getStringExtra("exercise_tips");
 
         txtExerciseName.setText(exerciseName);
         txtDescription.setText(description);
         imgExercise.setImageResource(imageResId);
         txtMuscleGroup.setText(muscleGroup);
+        txtTips.setText(tips);
 
 
         // BACK BUTTON

@@ -14,11 +14,16 @@ public class Exercise {
     // nhom co
     private String muscleGroup;
 
-    public Exercise(String name, String description, int imageResId, String muscleGroup) {
+    // típ
+    private String tips;
+
+    public Exercise(String name, String description, int imageResId, String muscleGroup,
+                    String tips) {
         this.name = name;
         this.description = description;
         this.imageResId = imageResId;
         this.muscleGroup = muscleGroup;
+        this.tips = tips;
     }
 
     public String getName() {
@@ -35,5 +40,9 @@ public class Exercise {
 
     public String getMuscleGroup() {
         return muscleGroup;
+    }
+
+    public String getTips() {
+        return tips;
     }
 }

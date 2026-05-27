@@ -73,6 +73,9 @@ public class ExerciseListActivity extends AppCompatActivity {
 
             intent.putExtra("muscle_group", muscleName);
 
+            intent.putExtra("exercise_tips", exercise.getTips());
+
+
             startActivity(intent);
         });
         // xu ly nut back

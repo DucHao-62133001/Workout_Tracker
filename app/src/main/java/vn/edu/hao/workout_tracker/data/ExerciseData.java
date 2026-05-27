@@ -102,18 +102,20 @@ public class ExerciseData {
             exerciseList.add(
                     new Exercise(
                             "Bench Press",
-                            "Đẩy ngực với thanh xàĐẩy ngực với thanh xà",
+                            "Đẩy ngực với thanh xà",
                             R.drawable.ic_launcher_foreground,
-                            "Ngực"
+                            "Ngực",
+                            "- Giữ vai ổn định\n- Không nảy thanh đòn"
                     )
             );
 
             exerciseList.add(
                     new Exercise(
-                            "Incline Dumbbell Press",
-                            "Đẩy ngực với tạ Dumbells tập trung cho ngực trên",
+                            "Incline Dumbell Press",
+                            "Đẩy ngực với tạ đơn",
                             R.drawable.ic_launcher_foreground,
-                            "Ngực"
+                            "Ngực",
+                            "- Giữ vai ổn định\n- Ép 2 cánh tay sát người"
                     )
             );
         }
@@ -126,7 +128,8 @@ public class ExerciseData {
                             "Pull Up",
                             "Bài tập sử dụng khối lượng cơ thể",
                             R.drawable.ic_launcher_foreground,
-                            "Lưng"
+                            "Lưng",
+                            "- Giữ vai ổn định\n- Đầu gối cùng hướng mũi chân"
                     )
             );
 
@@ -135,7 +138,8 @@ public class ExerciseData {
                             "Lat Pulldown",
                             "Bài tập máy cho cơ Lats",
                             R.drawable.ic_launcher_foreground,
-                            "Lưng"
+                            "Lưng",
+                            "- Giữ vai ổn định\n- Đầu gối cùng hướng mũi chân"
                     )
             );
         }
@@ -148,16 +152,18 @@ public class ExerciseData {
                             "Squat",
                             "Bài tập chân Compound",
                             R.drawable.ic_launcher_foreground,
-                            "Chân"
-                    )
-            );
+                            "Chân",
+                            "- Giữ lưng trung lập\n- Đầu gối cùng hướng mũi chân"
+                    ))
+            ;
 
             exerciseList.add(
                     new Exercise(
                             "Leg Press",
                             "Tập chân với máy",
                             R.drawable.ic_launcher_foreground,
-                            "Chân"
+                            "Chân",
+                            "- Giữ lưng trung lập\n- Đầu gối cùng hướng mũi chân"
                     )
             );
         }
@@ -168,9 +174,10 @@ public class ExerciseData {
             exerciseList.add(
                     new Exercise(
                             "Crunch",
-                            "Chuyển động gập bụng trên cơ bản",
+                            "Chuyển động gập bụng",
                             R.drawable.ic_launcher_foreground,
-                            "Bụng"
+                            "Bụng",
+                            "- Không kéo cổ\n- Siết bụng khi lên"
                     )
             );
 
@@ -179,7 +186,8 @@ public class ExerciseData {
                             "Leg Raise",
                             "Bài nâng chân tập trung cho cơ bụng dưới",
                             R.drawable.ic_launcher_foreground,
-                            "Bụng"
+                            "Bụng",
+                            "- Giữ lưng trung lập\n- Đầu gối cùng hướng mũi chân"
                     )
             );
         }
@@ -192,7 +200,8 @@ public class ExerciseData {
                             "Shoulder Press",
                             "Bài tập đẩy vai cơ bản",
                             R.drawable.ic_launcher_foreground,
-                            "Vai"
+                            "Vai",
+                            "- Giữ vai ổn định\n- Không nảy thanh đòn"
                     )
             );
 
@@ -201,7 +210,8 @@ public class ExerciseData {
                             "Lateral Raise",
                             "Bài cô lập cho cơ vai ngang",
                             R.drawable.ic_launcher_foreground,
-                            "Vai"
+                            "Vai",
+                            "- Giữ vai ổn định\n- Không nảy thanh đòn"
                     )
             );
         }
@@ -213,7 +223,8 @@ public class ExerciseData {
                             "Hammer Curl",
                             "Bài tập giúp cải thiện cánh tay và lực nắm",
                             R.drawable.ic_launcher_foreground,
-                            "Cánh Tay"
+                            "Cánh Tay",
+                            "- Giữ vai ổn định\n- Không nảy thanh đòn"
                     )
             );
 
@@ -222,7 +233,8 @@ public class ExerciseData {
                             "Reverse Curl",
                             "Tập trung vào cánh tay và cơ tay",
                             R.drawable.ic_launcher_foreground,
-                            "Cánh Tay"
+                            "Cánh Tay",
+                            "- Giữ vai ổn định\n- Không nảy thanh đòn"
                     )
             );
         }
@@ -235,7 +247,8 @@ public class ExerciseData {
                             "Barbell Curl",
                             "Bài tập cho cơ tay trước",
                             R.drawable.ic_launcher_foreground,
-                            "Tay Trước"
+                            "Tay Trước",
+                            "- Giữ vai ổn định\n- Không nảy thanh đòn"
                     )
             );
 
@@ -244,7 +257,8 @@ public class ExerciseData {
                             "Concentration Curl",
                             "Giúp cơ tay trước nét hơn",
                             R.drawable.ic_launcher_foreground,
-                            "Tay Trước"
+                            "Tay Trước",
+                            "- Giữ vai ổn định\n- Không nảy thanh đòn"
                     )
             );
         }
@@ -257,7 +271,8 @@ public class ExerciseData {
                             "Tricep Pushdown",
                             "Bài tập phổ biến cho tay sau",
                             R.drawable.ic_launcher_foreground,
-                            "Tay sau"
+                            "Tay sau",
+                            "- Giữ vai ổn định\n- Không nảy thanh đòn"
                     )
             );
 
@@ -266,7 +281,8 @@ public class ExerciseData {
                             "Overhead Extension",
                             "Giúp phát triển cơ đầu dài tay sau",
                             R.drawable.ic_launcher_foreground,
-                            "Tay sau"
+                            "Tay sau",
+                            "- Giữ vai ổn định\n- Không nảy thanh đòn"
                     )
             );
         }
@@ -279,7 +295,8 @@ public class ExerciseData {
                             "Standing Calf Raise",
                             "Bài tập cơ bản cho bắp chuối",
                             R.drawable.ic_launcher_foreground,
-                            "Cẳng Chân"
+                            "Cẳng Chân",
+                            "- Giữ vai ổn định\n- Không nảy thanh đòn"
                     )
             );
 
@@ -288,7 +305,8 @@ public class ExerciseData {
                             "Seated Calf Raise",
                             "Tập trung vào phần dưới bắp chuối",
                             R.drawable.ic_launcher_foreground,
-                            "Cẳng chân"
+                            "Cẳng chân",
+                            "- Giữ vai ổn định\n- Không nảy thanh đòn"
                     )
             );
         }
