@@ -21,6 +21,12 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.HashSet;
+import java.util.Locale;
+import vn.edu.hao.workout_tracker.models.WorkoutLog;
+
 public class ProfileFragment extends Fragment {
 
     private TextView txtEmail, txtBMIResult;
@@ -30,6 +36,7 @@ public class ProfileFragment extends Fragment {
     private FirebaseAuth mAuth;
     private TextView txtTotalWorkouts;
     private DatabaseReference databaseReference;
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -63,16 +70,38 @@ public class ProfileFragment extends Fragment {
                     .child(user.getUid());
 
             // Dem tong workout
+// Dem tong ngay tap
             databaseReference.addValueEventListener(
                     new ValueEventListener() {
 
                         @Override
                         public void onDataChange(DataSnapshot snapshot) {
 
-                            int total = (int) snapshot.getChildrenCount();
+                            HashSet<String> workoutDays = new HashSet<>();
+
+                            SimpleDateFormat sdf = new SimpleDateFormat(
+                                    "yyyy-MM-dd",
+                                    Locale.getDefault()
+                            );
+
+                            for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
+
+                                WorkoutLog log = dataSnapshot.getValue(WorkoutLog.class);
+
+                                if (log != null) {
+
+                                    String date = sdf.format(
+                                            new Date(log.getTimestamp())
+                                    );
+
+                                    workoutDays.add(date);
+                                }
+                            }
+
+                            int totalDays = workoutDays.size();
 
                             txtTotalWorkouts.setText(
-                                    "Tổng số lần tập: " + total
+                                    "\uD83D\uDD25 Tổng số ngày tập: " + totalDays
                             );
                         }
 
