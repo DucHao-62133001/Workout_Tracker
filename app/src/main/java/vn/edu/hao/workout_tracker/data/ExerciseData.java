@@ -17,9 +17,9 @@ public class ExerciseData {
         // them nhom co vao list
         muscleList.add(
                 new MuscleGroup(
-                        "Bụng",
+                        "Ngực",
                         "18 exercises",
-                        R.drawable.abs
+                        R.drawable.chest
                 )
         );
 
@@ -33,9 +33,9 @@ public class ExerciseData {
 
         muscleList.add(
                 new MuscleGroup(
-                        "Ngực",
+                        "Bụng",
                         "23 exercises",
-                        R.drawable.chest
+                        R.drawable.abs
                 )
         );
 
@@ -103,7 +103,7 @@ public class ExerciseData {
                     new Exercise(
                             "Bench Press",
                             "Đẩy ngực với thanh xà ngang",
-                            R.drawable.bench_2,
+                            R.drawable.bench_press_2,
                             "Ngực",
                             "- Giữ vai ổn định\n- Không nảy thanh đòn"
                     )
@@ -116,6 +116,94 @@ public class ExerciseData {
                             R.drawable.inclinedb_2,
                             "Ngực",
                             "- Giữ vai ổn định\n- Ép 2 cánh tay sát người"
+                    )
+            );
+
+            exerciseList.add(
+                    new Exercise(
+                            "Incline Press",
+                            "Đẩy ngực chéo với thanh xà",
+                            R.drawable.incline_2,
+                            "Ngực",
+                            "- Giữ vai ổn định\n- Ép 2 cánh tay sát người" +
+                                    "\n- Biên độ xuống chạm ngực"
+                    )
+            );
+
+            exerciseList.add(
+                    new Exercise(
+                            "Dumbbell Flys",
+                            "Ép ngực với tạ đơn",
+                            R.drawable.db_fly_2,
+                            "Ngực",
+                            "- Nhả tới khi thấy cơ ngực banh ra\n- Ép 2 cánh tay sát người" +
+                                    "\n- Giữ 1s siết ở đỉnh"
+                    )
+            );
+
+            exerciseList.add(
+                    new Exercise(
+                            "Pec Deck Flies",
+                            "Ép ngực với máy",
+                            R.drawable.pec_dec_2,
+                            "Ngực",
+                            "- Dùng lực ở khuỷu tay\n- Ép khuỷu tay sát người" +
+                                    "\n- Giữ 1s siết ở đỉnh"
+                    )
+            );
+
+            exerciseList.add(
+                    new Exercise(
+                            "Dumbbell Flys",
+                            "Ép ngực với tạ đơn",
+                            R.drawable.db_fly_2,
+                            "Ngực",
+                            "- Nhả tới khi thấy cơ ngực banh ra\n- Ép 2 cánh tay sát người" +
+                                    "\n- Giữ 1s siết ở đỉnh"
+                    )
+            );
+
+            exerciseList.add(
+                    new Exercise(
+                            "Push up",
+                            "Bài compound giúp phát triển ngực, vai và tay sau",
+                            R.drawable.push_up_1,
+                            "Ngực",
+                            "- 2 tay rộng bằng vai\n- Ép 2 khuỷu tay vào thân" +
+                                    "\n- Xuống chậm"
+                    )
+            );
+
+            exerciseList.add(
+                    new Exercise(
+                            "Decline Bench Press",
+                            "Đẩy ngực dốc xuống tập trung lower chest",
+                            R.drawable.decline_2,
+                            "Ngực",
+                            "- Giữ vai cố định\n- Ép 2 khuỷu tay gần thân" +
+                                    "\n- Thanh đòn chạm ngực"
+                    )
+            );
+
+            exerciseList.add(
+                    new Exercise(
+                            "High To Low Cable Fly",
+                            "Cable fly từ cao xuống thấp giúp nét lower chest rõ hơn",
+                            R.drawable.cable_fly_2,
+                            "Ngực",
+                            "- Nghiên người nhẹ về trước\n- 1 chân trụ trước" +
+                                    "\n- Không banh 2 tay quá rộng"
+                    )
+            );
+
+            exerciseList.add(
+                    new Exercise(
+                            "Chest Dips",
+                            "Chest dips hỗ trợ ngực dưới và tay sau",
+                            R.drawable.dips_2,
+                            "Ngực",
+                            "- Nghiên người nhẹ về trước\n- Không nhún vai" +
+                                    "\n- Không banh 2 tay quá rộng"
                     )
             );
         }

@@ -105,13 +105,43 @@ public class ExerciseDetailActivity extends AppCompatActivity {
 
         // Ngực
         if (exerciseName.equals("Bench Press")) {
-            imageList.add(R.drawable.bench_1);
-            imageList.add(R.drawable.bench_2);
+            imageList.add(R.drawable.bench_press_1);
+            imageList.add(R.drawable.bench_press_2);
         }
         else if (exerciseName.equals("Incline Dumbell Press")) {
             imageList.add(R.drawable.inclinedb_1);
             imageList.add(R.drawable.inclinedb_2);
         }
+        else if (exerciseName.equals("Incline Press")) {
+            imageList.add(R.drawable.incline_1);
+            imageList.add(R.drawable.incline_2);
+        }
+        else if (exerciseName.equals("Dumbbell Flys")) {
+            imageList.add(R.drawable.db_fly_1);
+            imageList.add(R.drawable.db_fly_2);
+        }
+        else if (exerciseName.equals("Pec Deck Flies")) {
+            imageList.add(R.drawable.pec_dec_1);
+            imageList.add(R.drawable.pec_dec_2);
+        }
+        else if (exerciseName.equals("Push up")) {
+            imageList.add(R.drawable.push_up_1);
+            imageList.add(R.drawable.push_up_2);
+        }
+        else if (exerciseName.equals("Decline Bench Press")) {
+            imageList.add(R.drawable.decline_1);
+            imageList.add(R.drawable.decline_2);
+        }
+        else if (exerciseName.equals("High To Low Cable Fly")) {
+            imageList.add(R.drawable.cable_fly_1);
+            imageList.add(R.drawable.cable_fly_2);
+        }
+        else if (exerciseName.equals("Chest Dips")) {
+            imageList.add(R.drawable.dips_1);
+            imageList.add(R.drawable.dips_2);
+        }
+
+
 
         // Bụng
         else if (exerciseName.equals("Crunch")) {
