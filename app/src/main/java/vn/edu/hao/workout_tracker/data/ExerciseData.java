@@ -18,7 +18,7 @@ public class ExerciseData {
         muscleList.add(
                 new MuscleGroup(
                         "Ngực",
-                        "18 exercises",
+                        "10 exercises",
                         R.drawable.chest
                 )
         );

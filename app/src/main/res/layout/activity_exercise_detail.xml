@@ -50,7 +50,6 @@
             android:textStyle="bold" />
 
         <!-- IMAGE CARD -->
-        <!-- IMAGE CARD -->
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="230dp"
@@ -72,7 +71,6 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="18dp"
             android:lineSpacingExtra="4dp"
-            android:text="Exercise description"
             android:textColor="#444444"
             android:textSize="16sp" />
 
