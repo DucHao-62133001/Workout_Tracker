@@ -278,7 +278,7 @@ public class ExerciseDetailActivity extends AppCompatActivity {
         }
 
 
-        // Cánh tay
+        // Cẳng tay
         else if (exerciseName.equals("Hammer Curl")) {
             imageList.add(R.drawable.hammer_curl_1);
             imageList.add(R.drawable.hammer_curl_2);
@@ -287,6 +287,23 @@ public class ExerciseDetailActivity extends AppCompatActivity {
             imageList.add(R.drawable.reverse_curl_1);
             imageList.add(R.drawable.reverse_curl_2);
         }
+        else if (exerciseName.equals("Wrist Curl")) {
+            imageList.add(R.drawable.wrist_curl_1);
+            imageList.add(R.drawable.reverse_curl_2);
+        }
+        else if (exerciseName.equals("Reverse Grip Curl")) {
+            imageList.add(R.drawable.reverse_grip_curl_1);
+            imageList.add(R.drawable.reverse_grip_curl_2);
+        }
+        else if (exerciseName.equals("Farmer Walk")) {
+            imageList.add(R.drawable.farmer_walk_1);
+            imageList.add(R.drawable.farmer_walk_2);
+        }
+        else if (exerciseName.equals("Dead Hang")) {
+            imageList.add(R.drawable.dead_hang_1);
+        }
+
+
 
         // Tay trước
         else if (exerciseName.equals("Barbell Curl")) {
@@ -296,6 +313,34 @@ public class ExerciseDetailActivity extends AppCompatActivity {
         else if (exerciseName.equals("Concentration Curl")) {
             imageList.add(R.drawable.concentration_curl_1);
             imageList.add(R.drawable.concentration_curl_2);
+        }
+        else if (exerciseName.equals("Dumbbell Curl")) {
+            imageList.add(R.drawable.db_curl_1);
+            imageList.add(R.drawable.db_curl_2);
+        }
+        else if (exerciseName.equals("Preacher Curl")) {
+            imageList.add(R.drawable.preacher_curl_1);
+            imageList.add(R.drawable.preacher_curl_2);
+        }
+        else if (exerciseName.equals("Cable Curl")) {
+            imageList.add(R.drawable.cable_curl_1);
+            imageList.add(R.drawable.cable_curl_2);
+        }
+        else if (exerciseName.equals("EZ Bar Curl")) {
+            imageList.add(R.drawable.ez_curl_1);
+            imageList.add(R.drawable.ez_curl_2);
+        }
+        else if (exerciseName.equals("Incline Dumbbell Curl")) {
+            imageList.add(R.drawable.incline_db_curl_1);
+            imageList.add(R.drawable.incline_db_curl_2);
+        }
+        else if (exerciseName.equals("Spider Curl")) {
+            imageList.add(R.drawable.spider_curl_1);
+            imageList.add(R.drawable.spider_curl_2);
+        }
+        else if (exerciseName.equals("Bayesian Curl")) {
+            imageList.add(R.drawable.baye_curl_1);
+            imageList.add(R.drawable.baye_curl_2);
         }
 
         // Tay sau
@@ -307,6 +352,34 @@ public class ExerciseDetailActivity extends AppCompatActivity {
             imageList.add(R.drawable.overhead_extension_1);
             imageList.add(R.drawable.overhead_extension_2);
         }
+        else if (exerciseName.equals("Close Grip Bench Press")) {
+            imageList.add(R.drawable.close_grip_bench_press_1);
+            imageList.add(R.drawable.close_grip_bench_press_2);
+        }
+        else if (exerciseName.equals("Skull Crusher")) {
+            imageList.add(R.drawable.skull_crusher_1);
+            imageList.add(R.drawable.skull_crusher_2);
+        }
+        else if (exerciseName.equals("Dips")) {
+            imageList.add(R.drawable.dips_1);
+            imageList.add(R.drawable.dips_2);
+        }
+        else if (exerciseName.equals("Cable Kickback")) {
+            imageList.add(R.drawable.cable_kickback_1);
+            imageList.add(R.drawable.cable_kickback_2);
+        }
+        else if (exerciseName.equals("Dumbbell Kickback")) {
+            imageList.add(R.drawable.db_kickback_1);
+            imageList.add(R.drawable.db_kickback_2);
+        }
+        else if (exerciseName.equals("Rope Pushdown")) {
+            imageList.add(R.drawable.rope_pushdown_1);
+            imageList.add(R.drawable.rope_pushdown_2);
+        }
+        else if (exerciseName.equals("Single Arm Pushdown")) {
+            imageList.add(R.drawable.single_arm_pushdown_1);
+            imageList.add(R.drawable.single_arm_pushdown_2);
+        }
 
         // Vai
         else if (exerciseName.equals("Shoulder Press")) {
@@ -317,6 +390,36 @@ public class ExerciseDetailActivity extends AppCompatActivity {
             imageList.add(R.drawable.lateral_raise_1);
             imageList.add(R.drawable.lateral_raise_2);
         }
+        else if (exerciseName.equals("Front Raise")) {
+            imageList.add(R.drawable.front_raise_1);
+            imageList.add(R.drawable.front_raise_2);
+        }
+        else if (exerciseName.equals("Rear Delt Fly")) {
+            imageList.add(R.drawable.rear_delt_fly_1);
+            imageList.add(R.drawable.rear_delt_fly_2);
+        }
+        else if (exerciseName.equals("Cable Lateral Raise")) {
+            imageList.add(R.drawable.cable_lateral_raise_1);
+            imageList.add(R.drawable.cable_lateral_raise_2);
+        }
+        else if (exerciseName.equals("Arnold Press")) {
+            imageList.add(R.drawable.arnold_press_1);
+            imageList.add(R.drawable.arnold_press_2);
+        }
+        else if (exerciseName.equals("Machine Shoulder Press")) {
+            imageList.add(R.drawable.machine_shoulder_press_1);
+            imageList.add(R.drawable.machine_shoulder_press_2);
+        }
+        else if (exerciseName.equals("Upright Row")) {
+            imageList.add(R.drawable.upright_row_1);
+            imageList.add(R.drawable.upright_row_2);
+        }
+        else if (exerciseName.equals("Dumbbell Shoulder Press")) {
+            imageList.add(R.drawable.db_shoulder_press_1);
+            imageList.add(R.drawable.db_shoulder_press_2);
+        }
+
+        // ảnh riêng
         else {
 
             imageList.add(imageResId);

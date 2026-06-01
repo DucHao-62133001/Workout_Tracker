@@ -515,9 +515,86 @@ public class ExerciseData {
                             "- Tập với tempo chậm\n- Nâng bằng khuỷu tay"
                     )
             );
+
+            exerciseList.add(
+                    new Exercise(
+                            "Front Raise",
+                            "Bài cô lập cho vai trước",
+                            R.drawable.front_raise_2,
+                            "Vai",
+                            "- Nâng tay ngang tầm vai\n- Không đung đưa người\n" +
+                                    "- Hạ tạ có kiểm soát"
+                    )
+            );
+
+            exerciseList.add(
+                    new Exercise(
+                            "Rear Delt Fly",
+                            "Bài tập cô lập cho vai sau",
+                            R.drawable.rear_delt_fly_2,
+                            "Vai",
+                            "- Gập người nhẹ\n- Mở rộng khuỷu tay\n" +
+                                    "- Siết vai sau ở đỉnh"
+                    )
+            );
+
+            exerciseList.add(
+                    new Exercise(
+                            "Cable Lateral Raise",
+                            "Biến thể nâng vai ngang bằng cáp",
+                            R.drawable.cable_lateral_raise_2,
+                            "Vai",
+                            "- Kéo bằng khuỷu tay\n- Tempo chậm\n" +
+                                    "- Giữ căng cơ liên tục"
+                    )
+            );
+
+            exerciseList.add(
+                    new Exercise(
+                            "Arnold Press",
+                            "Biến thể Shoulder Press của Arnold",
+                            R.drawable.arnold_press_2,
+                            "Vai",
+                            "- Xoay cổ tay khi đẩy lên\n- Không khóa khuỷu tay\n" +
+                                    "- Giữ core ổn định"
+                    )
+            );
+
+            exerciseList.add(
+                    new Exercise(
+                            "Machine Shoulder Press",
+                            "Bài đẩy vai bằng máy",
+                            R.drawable.machine_shoulder_press_2,
+                            "Vai",
+                            "- Tựa lưng vào ghế\n- Hạ chậm có kiểm soát\n" +
+                                    "- Không khóa khớp tay"
+                    )
+            );
+
+            exerciseList.add(
+                    new Exercise(
+                            "Upright Row",
+                            "Bài tập vai ngang và cầu vai",
+                            R.drawable.upright_row_2,
+                            "Vai",
+                            "- Kéo khuỷu tay cao hơn cổ tay\n- Thanh tạ sát người\n" +
+                                    "- Không dùng quán tính"
+                    )
+            );
+
+            exerciseList.add(
+                    new Exercise(
+                            "Dumbbell Shoulder Press",
+                            "Biến thể đẩy vai với tạ đơn",
+                            R.drawable.db_shoulder_press_2,
+                            "Vai",
+                            "- Giữ cổ tay trung lập\n- Đẩy theo vòng cung tự nhiên\n" +
+                                    "- Không ưỡn lưng"
+                    )
+            );
         }
         // nhom canh tay
-        else if (muscleName.equals("Cánh Tay")) {
+        else if (muscleName.equals("Cẳng Tay")) {
 
             exerciseList.add(
                     new Exercise(
@@ -538,9 +615,53 @@ public class ExerciseData {
                             "- Siết tay 1s khi lên\n- Tập tempo chậm"
                     )
             );
+
+            exerciseList.add(
+                    new Exercise(
+                            "Wrist Curl",
+                            "Bài tập cô lập cẳng tay trước",
+                            R.drawable.wrist_curl_2,
+                            "Cánh Tay",
+                            "- Chỉ chuyển động cổ tay\n- Siết mạnh ở đỉnh\n" +
+                                    "- Hạ tạ chậm"
+                    )
+            );
+
+            exerciseList.add(
+                    new Exercise(
+                            "Reverse Grip Curl",
+                            "Bài tập cẳng tay sau",
+                            R.drawable.reverse_grip_curl_2,
+                            "Cánh Tay",
+                            "- Chỉ chuyển động cổ tay\n- Tempo chậm\n" +
+                                    "- Không dùng quán tính"
+                    )
+            );
+
+            exerciseList.add(
+                    new Exercise(
+                            "Farmer Walk",
+                            "Bài tập tăng lực nắm và sức mạnh cẳng tay",
+                            R.drawable.farmer_walk_2,
+                            "Cánh Tay",
+                            "- Nắm tạ thật chắc\n- Giữ thân người thẳng\n" +
+                                    "- Bước đều và ổn định"
+                    )
+            );
+
+            exerciseList.add(
+                    new Exercise(
+                            "Dead Hang",
+                            "Treo người trên xà giúp tăng lực nắm",
+                            R.drawable.dead_hang_1,
+                            "Cánh Tay",
+                            "- Nắm xà chắc chắn\n- Giữ vai ổn định\n" +
+                                    "- Thở đều"
+                    )
+            );
         }
 
-        // nhom tay truoc
+        // tay truoc
         else if (muscleName.equals("Tay Trước")) {
 
             exerciseList.add(
@@ -562,9 +683,86 @@ public class ExerciseData {
                             "- Cố định khuỷu tay\n- Không dùng lực vai"
                     )
             );
+
+            exerciseList.add(
+                    new Exercise(
+                            "Dumbbell Curl",
+                            "Biến thể curl với tạ đơn",
+                            R.drawable.db_curl_2,
+                            "Tay Trước",
+                            "- Giữ khuỷu tay cố định\n- Không đung đưa người\n" +
+                                    "- Siết bắp tay ở đỉnh"
+                    )
+            );
+
+            exerciseList.add(
+                    new Exercise(
+                            "Preacher Curl",
+                            "Bài tập cô lập bắp tay trước",
+                            R.drawable.preacher_curl_2,
+                            "Tay Trước",
+                            "- Tì chắc tay lên ghế preacher\n- Không nhấc khuỷu tay\n" +
+                                    "- Hạ tạ chậm"
+                    )
+            );
+
+            exerciseList.add(
+                    new Exercise(
+                            "Cable Curl",
+                            "Bài tập biceps bằng dây cáp",
+                            R.drawable.cable_curl_2,
+                            "Tay Trước",
+                            "- Giữ căng cơ liên tục\n- Không ngả người ra sau\n" +
+                                    "- Siết mạnh ở đỉnh"
+                    )
+            );
+
+            exerciseList.add(
+                    new Exercise(
+                            "EZ Bar Curl",
+                            "Biến thể curl với thanh EZ",
+                            R.drawable.ez_curl_2,
+                            "Tay Trước",
+                            "- Cổ tay thoải mái hơn barbell\n- Khuỷu tay cố định\n" +
+                                    "- Không dùng quán tính"
+                    )
+            );
+
+            exerciseList.add(
+                    new Exercise(
+                            "Incline Dumbbell Curl",
+                            "Bài tập kéo giãn đầu dài biceps",
+                            R.drawable.incline_db_curl_2,
+                            "Tay Trước",
+                            "- Dựa lưng vào ghế nghiêng\n- Duỗi tay hoàn toàn\n" +
+                                    "- Siết bắp tay ở đỉnh"
+                    )
+            );
+
+            exerciseList.add(
+                    new Exercise(
+                            "Spider Curl",
+                            "Bài tập cô lập biceps ở vị trí nghiêng người",
+                            R.drawable.spider_curl_2,
+                            "Tay Trước",
+                            "- Giữ ngực áp ghế\n- Không dùng lực vai\n" +
+                                    "- Siết cơ ở đỉnh"
+                    )
+            );
+
+            exerciseList.add(
+                    new Exercise(
+                            "Bayesian Curl",
+                            "Bài tập cáp giúp kéo giãn biceps tối đa",
+                            R.drawable.baye_curl_2,
+                            "Tay Trước",
+                            "- Đứng quay lưng với máy cáp\n- Giữ khuỷu tay phía sau thân\n" +
+                                    "- Siết biceps ở đỉnh"
+                    )
+            );
         }
 
-        // nhom tay sau
+        // tay sau
         else if (muscleName.equals("Tay sau")) {
 
             exerciseList.add(
@@ -584,6 +782,83 @@ public class ExerciseData {
                             R.drawable.overhead_extension_2,
                             "Tay sau",
                             "- Thả tay ra sau hết cỡ\n- Ép 2 khuỷu tay gần nhau"
+                    )
+            );
+
+            exerciseList.add(
+                    new Exercise(
+                            "Close Grip Bench Press",
+                            "Bài compound phát triển tay sau",
+                            R.drawable.close_grip_bench_press_2,
+                            "Tay Sau",
+                            "- Khuỷu tay sát người\n- Hạ thanh đòn có kiểm soát\n" +
+                                    "- Đẩy mạnh bằng tay sau"
+                    )
+            );
+
+            exerciseList.add(
+                    new Exercise(
+                            "Skull Crusher",
+                            "Bài tập cô lập tay sau với thanh EZ",
+                            R.drawable.skull_crusher_2,
+                            "Tay Sau",
+                            "- Giữ khuỷu tay cố định\n- Hạ tạ gần trán\n" +
+                                    "- Duỗi tay hoàn toàn"
+                    )
+            );
+
+            exerciseList.add(
+                    new Exercise(
+                            "Dips",
+                            "Bài tập trọng lượng cơ thể cho tay sau",
+                            R.drawable.dips_2,
+                            "Tay Sau",
+                            "- Giữ thân người thẳng\n- Khuỷu tay hướng ra sau\n" +
+                                    "- Xuống có kiểm soát"
+                    )
+            );
+
+            exerciseList.add(
+                    new Exercise(
+                            "Cable Kickback",
+                            "Bài cô lập đầu ngoài tay sau",
+                            R.drawable.cable_kickback_2,
+                            "Tay Sau",
+                            "- Cố định khuỷu tay\n- Duỗi tay hoàn toàn\n" +
+                                    "- Siết cơ ở đỉnh"
+                    )
+            );
+
+            exerciseList.add(
+                    new Exercise(
+                            "Dumbbell Kickback",
+                            "Biến thể kickback với tạ đơn",
+                            R.drawable.db_kickback_2,
+                            "Tay Sau",
+                            "- Thân người hơi gập\n- Khuỷu tay cố định\n" +
+                                    "- Tempo chậm"
+                    )
+            );
+
+            exerciseList.add(
+                    new Exercise(
+                            "Rope Pushdown",
+                            "Biến thể pushdown với dây thừng",
+                            R.drawable.rope_pushdown_2,
+                            "Tay Sau",
+                            "- Tách dây ở cuối biên độ\n- Khuỷu tay sát thân\n" +
+                                    "- Siết mạnh tay sau"
+                    )
+            );
+
+            exerciseList.add(
+                    new Exercise(
+                            "Single Arm Pushdown",
+                            "Pushdown từng tay giúp cân bằng sức mạnh",
+                            R.drawable.single_arm_pushdown_2,
+                            "Tay Sau",
+                            "- Khuỷu tay cố định\n- Duỗi hết biên độ\n" +
+                                    "- Không xoay người"
                     )
             );
         }
