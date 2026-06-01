@@ -27,6 +27,14 @@ import java.util.HashSet;
 import java.util.Locale;
 import vn.edu.hao.workout_tracker.models.WorkoutLog;
 
+import android.net.Uri;
+import android.widget.ImageView;
+
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.PickVisualMediaRequest;
+import androidx.activity.result.contract.ActivityResultContracts;
+import com.google.android.material.imageview.ShapeableImageView;
+
 public class ProfileFragment extends Fragment {
 
     private TextView txtEmail, txtBMIResult;
@@ -36,6 +44,9 @@ public class ProfileFragment extends Fragment {
     private FirebaseAuth mAuth;
     private TextView txtTotalWorkouts;
     private DatabaseReference databaseReference;
+    private ShapeableImageView imgAvatar;
+
+    private ActivityResultLauncher<PickVisualMediaRequest> pickMedia;
 
 
     @Override
@@ -43,10 +54,75 @@ public class ProfileFragment extends Fragment {
                              Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_profile, container, false);
+
+        imgAvatar = view.findViewById(R.id.imgAvatar);
+
+        if (imgAvatar == null) {
+            throw new RuntimeException("IMG AVATAR NULL");
+        }
+
+        pickMedia =
+                registerForActivityResult(
+                        new ActivityResultContracts.PickVisualMedia(),
+                        uri -> {
+
+                            if (uri != null) {
+
+                                try {
+
+                                    requireContext()
+                                            .getContentResolver()
+                                            .takePersistableUriPermission(
+                                                    uri,
+                                                    Intent.FLAG_GRANT_READ_URI_PERMISSION
+                                            );
+
+                                } catch (Exception e) {
+
+                                    e.printStackTrace();
+                                }
+
+                                imgAvatar.setImageURI(uri);
+
+                                FirebaseUser user =
+                                        FirebaseAuth.getInstance()
+                                                .getCurrentUser();
+
+                                if (user != null) {
+
+                                    requireActivity()
+                                            .getSharedPreferences(
+                                                    "AvatarPrefs",
+                                                    0
+                                            )
+                                            .edit()
+                                            .putString(
+                                                    "avatar_" + user.getUid(),
+                                                    uri.toString()
+                                            )
+                                            .apply();
+                                }
+                            }
+                        }
+                );
+
+        imgAvatar.setOnClickListener(v ->
+
+                pickMedia.launch(
+                        new PickVisualMediaRequest.Builder()
+                                .setMediaType(
+                                        ActivityResultContracts
+                                                .PickVisualMedia
+                                                .ImageOnly.INSTANCE
+                                )
+                                .build()
+                )
+        );
         // Firebase
         mAuth = FirebaseAuth.getInstance();
 
         // ánh xạ
+        imgAvatar = view.findViewById(R.id.imgAvatar);
         txtEmail = view.findViewById(R.id.txtEmail);
         txtBMIResult = view.findViewById(R.id.txtBMIResult);
         txtTotalWorkouts = view.findViewById(R.id.txtTotalWorkouts);
@@ -58,6 +134,39 @@ public class ProfileFragment extends Fragment {
         // HIỂN THỊ EMAIL USER
         FirebaseUser user = mAuth.getCurrentUser();
         if (user != null) {
+            String avatarUri =
+                    requireActivity()
+                            .getSharedPreferences(
+                                    "AvatarPrefs",
+                                    0
+                            )
+                            .getString(
+                                    "avatar_" + user.getUid(),
+                                    null
+                            );
+
+            if (avatarUri != null) {
+
+                try {
+
+                    imgAvatar.setImageURI(
+                            Uri.parse(avatarUri)
+                    );
+
+                } catch (Exception e) {
+
+                    requireActivity()
+                            .getSharedPreferences(
+                                    "AvatarPrefs",
+                                    0
+                            )
+                            .edit()
+                            .remove(
+                                    "avatar_" + user.getUid()
+                            )
+                            .apply();
+                }
+            }
 
             txtEmail.setText(
                     "Email: " + user.getEmail()
