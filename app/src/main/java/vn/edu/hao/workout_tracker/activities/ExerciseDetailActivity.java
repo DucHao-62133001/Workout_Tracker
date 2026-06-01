@@ -153,6 +153,30 @@ public class ExerciseDetailActivity extends AppCompatActivity {
             imageList.add(R.drawable.leg_raise_1);
             imageList.add(R.drawable.leg_raise_2);
         }
+        else if (exerciseName.equals("Plank")) {
+            imageList.add(R.drawable.plank_1);
+        }
+        else if (exerciseName.equals("Side Plank")) {
+            imageList.add(R.drawable.side_plank_1);
+        }
+        else if (exerciseName.equals("Reverse Crunch")) {
+            imageList.add(R.drawable.reverse_crunch_1);
+            imageList.add(R.drawable.reverse_crunch_2);
+        }
+        else if (exerciseName.equals("Hanging Leg Raise")) {
+            imageList.add(R.drawable.hanging_leg_raise_1);
+            imageList.add(R.drawable.hanging_leg_raise_2);
+        }
+        else if (exerciseName.equals("Dead Bug")) {
+            imageList.add(R.drawable.dead_bug_1);
+            imageList.add(R.drawable.dead_bug_2);
+            imageList.add(R.drawable.dead_bug_1);
+            imageList.add(R.drawable.dead_bug_3);
+        }
+        else if (exerciseName.equals("Cable Crunch")) {
+            imageList.add(R.drawable.cable_crunch_1);
+            imageList.add(R.drawable.cable_crunch_2);
+        }
 
         // Lưng
         else if (exerciseName.equals("Pull Up")) {
@@ -162,6 +186,34 @@ public class ExerciseDetailActivity extends AppCompatActivity {
         else if (exerciseName.equals("Lat Pulldown")) {
             imageList.add(R.drawable.lat_pulldown_1);
             imageList.add(R.drawable.lat_pulldown_2);
+        }
+        else if (exerciseName.equals("Straight Arm Pulldown")) {
+            imageList.add(R.drawable.straight_arm_pulldown_1);
+            imageList.add(R.drawable.straight_arm_pulldown_2);
+        }
+        else if (exerciseName.equals("Seated Cable Row")) {
+            imageList.add(R.drawable.seated_cable_row_1);
+            imageList.add(R.drawable.seated_cable_row_2);
+        }
+        else if (exerciseName.equals("T-Bar Row")) {
+            imageList.add(R.drawable.t_bar_1);
+            imageList.add(R.drawable.t_bar_2);
+        }
+        else if (exerciseName.equals("Chest Supported Row")) {
+            imageList.add(R.drawable.chest_spot_row_1);
+            imageList.add(R.drawable.chest_spot_row_2);
+        }
+        else if (exerciseName.equals("Face Pull")) {
+            imageList.add(R.drawable.face_pull_1);
+            imageList.add(R.drawable.face_pull_2);
+        }
+        else if (exerciseName.equals("Reverse Pec Deck")) {
+            imageList.add(R.drawable.reverse_pec_dec_1);
+            imageList.add(R.drawable.reverse_pec_dec_2);
+        }
+        else if (exerciseName.equals("Barbell Row")) {
+            imageList.add(R.drawable.barbell_row_1);
+            imageList.add(R.drawable.barbell_row_2);
         }
 
         // Chân
@@ -173,6 +225,31 @@ public class ExerciseDetailActivity extends AppCompatActivity {
             imageList.add(R.drawable.leg_press_1);
             imageList.add(R.drawable.leg_press_2);
         }
+        else if (exerciseName.equals("Leg Extension")) {
+            imageList.add(R.drawable.leg_extension_1);
+            imageList.add(R.drawable.leg_extension_2);
+        }
+        else if (exerciseName.equals("Leg Curl")) {
+            imageList.add(R.drawable.leg_curl_1);
+            imageList.add(R.drawable.leg_curl_2);
+        }
+        else if (exerciseName.equals("Romanian Deadlift")) {
+            imageList.add(R.drawable.romanian_dl_1);
+            imageList.add(R.drawable.romanian_dl_2);
+        }
+        else if (exerciseName.equals("Bulgarian Split Squat")) {
+            imageList.add(R.drawable.bulgarian_split_1);
+            imageList.add(R.drawable.bulgarian_split_2);
+        }
+        else if (exerciseName.equals("Hack Squat")) {
+            imageList.add(R.drawable.hack_squat_1);
+            imageList.add(R.drawable.hack_squat_2);
+        }
+        else if (exerciseName.equals("Goblet Squat")) {
+            imageList.add(R.drawable.goblet_squat_1);
+            imageList.add(R.drawable.goblet_squat_2);
+        }
+
 
         //  Cẳng chân
         else if (exerciseName.equals("Standing Calf Raise")) {
@@ -183,6 +260,23 @@ public class ExerciseDetailActivity extends AppCompatActivity {
             imageList.add(R.drawable.seated_calf_1);
             imageList.add(R.drawable.seated_calf_2);
         }
+        else if (exerciseName.equals("Donkey Calf Raise")) {
+            imageList.add(R.drawable.donkey_calf_raise_1);
+            imageList.add(R.drawable.donkey_calf_raise_2);
+        }
+        else if (exerciseName.equals("Single Leg Calf Raise")) {
+            imageList.add(R.drawable.single_leg_calf_raise_1);
+            imageList.add(R.drawable.single_leg_calf_raise_2);
+        }
+        else if (exerciseName.equals("Leg Press Calf Raise")) {
+            imageList.add(R.drawable.leg_press_calf_1);
+            imageList.add(R.drawable.leg_press_calf_2);
+        }
+        else if (exerciseName.equals("smith machine Calf Raise")) {
+            imageList.add(R.drawable.smith_machine_calf_1);
+            imageList.add(R.drawable.smith_machine_calf_2);
+        }
+
 
         // Cánh tay
         else if (exerciseName.equals("Hammer Curl")) {
