@@ -87,9 +87,7 @@ public class LogAdapter
 
         holder.txtDate.setText(date);
 
-        // =========================
         // AN DATE NEU TRUNG NGAY
-        // =========================
 
         if (position > 0) {
 

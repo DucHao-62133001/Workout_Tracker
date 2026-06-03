@@ -77,20 +77,16 @@ public class ExerciseDetailActivity extends AppCompatActivity {
                 .getReference("workout_logs")
                 .child(uid);
 
-
         // ÁNH XẠ VIEW
 
         btnBack = findViewById(R.id.btnBack);
         txtExerciseName = findViewById(R.id.txtExerciseName);
         txtDescription = findViewById(R.id.txtDescription);
         viewPagerImages = findViewById(R.id.viewPagerImages);
-        //imgExercise = findViewById(R.id.imgExercise);
         txtTips = findViewById(R.id.txtTips);
-
         edtWeight = findViewById(R.id.edtWeight);
         edtReps = findViewById(R.id.edtReps);
         btnSaveLog = findViewById(R.id.btnSaveLog);
-
         txtMuscleGroup = findViewById(R.id.txtMuscleGroup);
 
 
@@ -140,8 +136,6 @@ public class ExerciseDetailActivity extends AppCompatActivity {
             imageList.add(R.drawable.dips_1);
             imageList.add(R.drawable.dips_2);
         }
-
-
 
         // Bụng
         else if (exerciseName.equals("Crunch")) {
